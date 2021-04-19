@@ -32,6 +32,7 @@ version = "0.0.4"
 importlib-metadata = {version = "^1.0", python = "<3.8"}
 matplotlib = "*"
 python = ">=3.6.1,<4.0"
+seaborn = "*"
 
 [tool.poetry.dev-dependencies]
 black = ">=20.8b1"
