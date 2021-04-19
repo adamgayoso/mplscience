@@ -31,12 +31,14 @@ version = "0.0.1"
 [tool.poetry.dependencies]
 importlib-metadata = {version = "^1.0", python = "<3.8"}
 matplotlib = "*"
-python = ">=3.6,<4.0"
-
-[tool.poetry.extras]
-dev = ["black", "pytest", "flake8", "codecov", "pre-commit", "isort"]
+python = ">=3.6.1,<4.0"
 
 [tool.poetry.dev-dependencies]
+black = ">=20.8b1"
+flake8 = ">=3.7.7"
+isort = ">=5.7"
+pre-commit = ">=2.7.1"
+pytest = ">=4.4"
 
 [build-system]
 build-backend = "poetry.masonry.api"
