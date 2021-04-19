@@ -1,6 +1,6 @@
 # mplscience
 
-Matplotlib style for scientific publications.
+Matplotlib style for scientific publications. This style keeps things pretty simple and aims to make moderate improvements to the base matplotlib style. It also sets things like the PDF font type to make it easier to interact with figures in Adobe Illustrator.
 
 
 ## Usage
