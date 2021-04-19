@@ -45,4 +45,4 @@ jobs:
         poetry run isort --check-only .
     - name: Test with pytest
       run: |
-        poetry run pytest --cov-report=xml --cov=mplscience --internet-tests
+        poetry run pytest --cov-report=xml --cov=mplscience
