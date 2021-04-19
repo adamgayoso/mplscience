@@ -14,7 +14,7 @@ mplscience.set_style()
 df = sns.load_dataset("anscombe")
 sns.scatterplot(x="x", y="y", hue="dataset", data=df)
 ```
-<img src="https://github.com/adamgayoso/mplscience/blob/main/images/scatter.png?raw=true" width="150" alt="scatter">
+<img src="https://github.com/adamgayoso/mplscience/blob/main/images/scatter.png?raw=true" width="300" alt="scatter">
 
 If you're using Seaborn, you may want to run `sns.reset_orig()` first to clear Seaborn-specific styling. You can also use the `reset_current` parameter of `mplscience` functions to reset any custom styling like this:
 
