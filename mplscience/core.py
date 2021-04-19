@@ -27,7 +27,6 @@ def set_style(name: Union[str, Iterable[str]] = ("default", "despine")) -> None:
     for n in names:
         if n not in _available_styles:
             raise ValueError("Style name not understood")
-        print(getattr(mplscience._styledata, n))
         rcparams_update.update(getattr(mplscience._styledata, n))
 
     plt.rcParams.update(rcparams_update)
