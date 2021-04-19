@@ -11,7 +11,12 @@ mplscience.available_styles()
 mplscience.set_style()
 ```
 
-If you're using Seaborn, you may want to run `sns.reset_orig()` first to clear Seaborn-specific styling.
+If you're using Seaborn, you may want to run `sns.reset_orig()` first to clear Seaborn-specific styling. You can also use the `reset_current` parameter of `mplscience` functions to reset any custom styling like this:
+
+```python
+mplscience.set_style(reset_current=True)
+```
+
 
 The style can also be using in a context like this:
 
@@ -20,4 +25,6 @@ import mplscience
 with mplscience.style_context():
     plt.plot(x, y)
 ```
+
+
 
