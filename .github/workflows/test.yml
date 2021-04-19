@@ -33,7 +33,8 @@ jobs:
     - name: Install dependencies
       run: |
         pip install pytest-cov
-        pip install .[dev]
+        pip install poetry
+        poetry install
     - name: Lint with flake8
       run: |
         flake8
