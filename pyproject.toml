@@ -1,0 +1,46 @@
+[tool.isort]
+include_trailing_comma = true
+multi_line_output = 3
+profile = "black"
+skip_glob = ["mplscience/__init__.py"]
+
+[tool.poetry]
+authors = ["Adam Gayoso <adamgayoso@berkeley.edu>"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Science/Research",
+  "Natural Language :: English",
+  "Programming Language :: Python :: 3.6",
+  "Programming Language :: Python :: 3.7",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Operating System :: MacOS :: MacOS X",
+  "Operating System :: Microsoft :: Windows",
+  "Operating System :: POSIX :: Linux",
+]
+description = "Matplotlib style for scientific publications."
+homepage = "https://github.com/adamgayoso/mplscience"
+license = "MIT"
+name = "mplscience"
+packages = [
+  {include = "mplscience"},
+]
+readme = "README.md"
+version = "0.0.1"
+
+[tool.poetry.dependencies]
+importlib-metadata = {version = "^1.0", python = "<3.8"}
+matplotlib = "*"
+python = ">=3.6,<4.0"
+
+[tool.poetry.extras]
+dev = ["black", "pytest", "flake8", "codecov", "pre-commit", "isort"]
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+build-backend = "poetry.masonry.api"
+requires = [
+  "poetry>=1.0",
+  "setuptools", # keep it here or "pip install -e" would fail
+]
