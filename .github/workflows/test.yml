@@ -32,7 +32,6 @@ jobs:
             ${{ runner.os }}-pip-v1-
     - name: Install dependencies
       run: |
-        pip install pytest-cov
         pip install poetry
         poetry install
     - name: Lint with flake8

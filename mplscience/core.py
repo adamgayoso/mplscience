@@ -20,16 +20,17 @@ def set_style(name: Union[str, Iterable[str]] = ("default", "despine")) -> None:
         Available style name
     """
 
-    if name not in _available_styles:
-        raise ValueError("Style name not understood")
-
-    rcparams = plt.rcParams
+    rcparams_update = {}
     names = [name] if isinstance(name, str) else name
 
     # compose multiple styles
     for n in names:
+        if n not in _available_styles:
+            raise ValueError("Style name not understood")
         print(getattr(mplscience._styledata, n))
-        rcparams.update(getattr(mplscience._styledata, n))
+        rcparams_update.update(getattr(mplscience._styledata, n))
+
+    plt.rcParams.update(rcparams_update)
 
 
 def style_context(name: Union[str, Iterable[str]] = ("default", "despine")):
