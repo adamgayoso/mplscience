@@ -37,17 +37,13 @@ jobs:
         poetry install
     - name: Lint with flake8
       run: |
-        flake8
+        poetry run flake8
     - name: Format with black
       run: |
-        black --check .
+        poetry run black --check .
     - name: Import sort
       run: |
-        isort --check-only .
+        poetry run isort --check-only .
     - name: Test with pytest
       run: |
-        pytest --cov-report=xml --cov=mplscience --internet-tests
-    - name: After success
-      run: |
-        codecov
-        pip list
+        poetry run pytest --cov-report=xml --cov=mplscience --internet-tests
