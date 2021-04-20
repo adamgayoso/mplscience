@@ -6,6 +6,14 @@ Matplotlib style for scientific publications. This style keeps things pretty sim
 
 ## Usage
 
+To install:
+
+```python
+pip install mplscience
+```
+
+To use:
+
 ```python
 import mplscience
 import seaborn as sns
