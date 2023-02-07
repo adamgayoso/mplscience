@@ -1,3 +1,5 @@
+"""Mplscience contexts for making nice plots."""
+
 from typing import Iterable, Union
 
 import matplotlib
@@ -9,6 +11,7 @@ from mplscience._styledata import __all__ as _available_styles
 
 
 def available_styles() -> str:
+    """Print available styles."""
     print(_available_styles)
 
 
@@ -25,7 +28,6 @@ def set_style(
     reset_current
         Reset any custom styling before applying style
     """
-
     rcparams_update = {}
     names = [name] if isinstance(name, str) else name
 
@@ -45,7 +47,7 @@ def style_context(
     name: Union[str, Iterable[str]] = ("default", "despine"),
     reset_current: bool = False,
 ):
-    """Creates a style context.
+    """Create a style context for plotting.
 
     Parameters
     ----------
@@ -58,7 +60,6 @@ def style_context(
     -------
     A context with selected style
     """
-
     rcparams = {}
     names = [name] if isinstance(name, str) else name
 

@@ -1,4 +1,4 @@
-"""Matplotlib science style"""
+"""Matplotlib science style."""
 
 from .core import available_styles, set_style, style_context
 

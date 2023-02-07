@@ -9,7 +9,7 @@ Matplotlib style for scientific publications. This style keeps things pretty sim
 
 To install:
 
-```python
+```bash
 pip install mplscience
 ```
 
@@ -18,6 +18,7 @@ To use:
 ```python
 import mplscience
 import seaborn as sns
+
 mplscience.available_styles()
 mplscience.set_style()
 df = sns.load_dataset("anscombe")
@@ -36,6 +37,7 @@ The style can also be using in a context like this:
 
 ```python
 import mplscience
+
 with mplscience.style_context():
     plt.plot(x, y)
 ```
